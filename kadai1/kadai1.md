@@ -5,7 +5,7 @@
 
 図1の画像を以下のコードで読み込む．
 
-ORG=imread('image/test.jpg');
+ORG=imread('image/test.jpg');  
 imagesc(ORG); axis image;
 
 原画像を1/2サンプリングするには，画像を1/2倍に縮小した後，2倍に拡大すればよい．なお，拡大する際には，単純補間するために「box」オプションを設定する．

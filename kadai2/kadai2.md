@@ -2,15 +2,15 @@
 
 今回8階調化に関しては以下の様なプログラムを考えてみた．
 
-IMG0 = ORG>16;
-IMG1 = ORG>32;
-IMG2 = ORG>64;
-IMG3 = ORG>128;
-IMG4 = ORG>140;
-IMG5 = ORG>150;
-IMG6 = ORG>160;
-IMG7 = ORG>192;
-IMG = IMG0+IMG1+IMG2+IMG3+IMG4+IMG5+IMG6+IMG7;
+IMG0 = ORG>16;  
+IMG1 = ORG>32;  
+IMG2 = ORG>64;  
+IMG3 = ORG>128;  
+IMG4 = ORG>140;  
+IMG5 = ORG>150;  
+IMG6 = ORG>160;  
+IMG7 = ORG>192;  
+IMG = IMG0+IMG1+IMG2+IMG3+IMG4+IMG5+IMG6+IMG7;  
 imagesc(IMG);colormap(gray);colorbar;axis image;
 
 このプログラムではグレースケール化した画像の各画素について，閾値16，32，64，128，140，150，160，192よりも明るい画素を白，それ以外は黒にするという二値化を行いそれらを足し合わせる事を行っている．なお，2〜4階調においてはそれぞれ128，64・128・192を閾値に設定している．
@@ -52,3 +52,5 @@ imagesc(IMG);colormap(gray);colorbar;axis image;
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai2/疑似輪郭なし/スクリーンショット%202016-11-07%2011.48.02.png">
 
 図8 図5の画像の8階調化
+
+図5の画像は所謂「アニメ画像」である．アニメ画像の主な特徴としては，塗りが均一であるという点である．グレースケール化前の画像は頬の部分の塗りがグラデーション掛かっていたが，それ以外の部分においては塗りが均一であった．こうした画像においては階調後も疑似輪郭は発生しない．	
