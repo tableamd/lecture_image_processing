@@ -6,17 +6,26 @@
 
 図1 元画像(グレースケール化)
 
+ORG = imnoise(ORG,'salt & pepper',0.02); % ノイズ添付    
+
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai9/2.png">
 
 図2 ノイズを乗せる
+
+IMG = filter2(fspecial('average',3),ORG); % 平滑化フィルタで雑音除去    
 
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai9/3.png">
 
 図3 図2の画像に平滑化フィルタ適用後
 
+IMG = medfilt2(ORG,[3 3]); % メディアンフィルタで雑音除去   
+
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai9/4.png">
 
 図4 図2の画像にメディアンフィルタ適用後
+
+f=[0,-1,0;-1,5,-1;0,-1,0]; % フィルタの設計     
+IMG = filter2(f,IMG,'same'); % フィルタの適用     
 
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai9/5.png">
 

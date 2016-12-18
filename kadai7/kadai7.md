@@ -10,6 +10,11 @@
 
 図2 図1のヒストグラム
 
+ORG = double(ORG);    
+mn = min(ORG(:)); % 濃度値の最小値を算出    
+mx = max(ORG(:)); % 濃度値の最大値を算出    
+ORG = (ORG-mn)/(mx-mn)*255;    
+
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai7/3.png">
 
 図3 ダイナミックレンジ拡大後の画像

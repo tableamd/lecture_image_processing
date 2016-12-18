@@ -12,13 +12,19 @@
 
 図1 元画像(グレースケール化)
 
+IMG = edge(ORG,'prewitt'); % エッジ抽出（プレウィット法）   
+
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai10/2.png">
 
 図2 エッジ抽出(プレウィット法)
 
+IMG = edge(ORG,'sobel'); % エッジ抽出（ソベル法）     
+
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai10/3.png">
 
 図3 エッジ抽出(ソベル法)
+
+IMG = edge(ORG,'canny'); % エッジ抽出（キャニー法）     
 
 <img src="https://github.com/tableamd/lecture_image_processing/blob/master/kadai10/4.png">
 
