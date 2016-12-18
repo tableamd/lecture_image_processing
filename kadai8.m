@@ -8,7 +8,7 @@ ORG = imread('https://www.pakutaso.com/shared/img/thumb/00_PP15_PP_TP_V.jpg'); %
 ORG = rgb2gray(ORG); % 白黒濃淡画像に変換
 imagesc(ORG); colormap(gray); colorbar; % 画像の表示
 pause;
-IMG = ORG > 128; % 閾値128で二値化
+IMG = ORG > 220; % 閾値220で二値化
 imagesc(IMG); colormap(gray); colorbar; % 画像の表示
 pause;
 IMG = bwlabeln(IMG);
