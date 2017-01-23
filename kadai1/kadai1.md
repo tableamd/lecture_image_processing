@@ -1,6 +1,6 @@
 今回課題1に用いた画像を図1に示す．
 
-<img src="https://github.com/tableamd/lecture_image_processing/blob/master/image/test.jpg" width="384">
+<img src="https://github.com/tableamd/lecture_image_processing/blob/master/image/test.jpg" width="384">     
 図1 元画像(1920*1275 ディジタルカラー画像)
 
 図1の画像を以下のコードで読み込む．
